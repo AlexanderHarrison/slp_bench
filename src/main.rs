@@ -38,6 +38,8 @@ fn main() {
     let slp_bytes = std::fs::read("test.slp").unwrap();
     let slpz_bytes = std::fs::read("test.slpz").unwrap();
     let slpp_bytes = std::fs::read("test.slpp").unwrap();
+    let zstd_slpp_bytes = std::fs::read("test.zstd.slpp").unwrap();
+    let lz4_slpp_bytes = std::fs::read("test.lz4.slpp").unwrap();
     
     // parse entire game -------
     
@@ -48,6 +50,12 @@ fn main() {
     
     black_box(peppi::io::peppi::read(Cursor::new(slpp_bytes.as_slice()), None).unwrap());
     split("peppi slpp parse full", t);
+    
+    black_box(peppi::io::peppi::read(Cursor::new(zstd_slpp_bytes.as_slice()), None).unwrap());
+    split("peppi zstd slpp parse full", t);
+    
+    black_box(peppi::io::peppi::read(Cursor::new(lz4_slpp_bytes.as_slice()), None).unwrap());
+    split("peppi lz4 slpp parse full", t);
     
     black_box(slp_parser::parse_file(&slp_bytes).unwrap());
     split("slp_parser slp parse full", t);
@@ -71,6 +79,18 @@ fn main() {
         Some(&peppi::io::peppi::de::Opts { skip_frames: true })
     ).unwrap());
     split("peppi slpp parse info", t);
+    
+    black_box(peppi::io::peppi::read(Cursor::new(
+        zstd_slpp_bytes.as_slice()),
+        Some(&peppi::io::peppi::de::Opts { skip_frames: true })
+    ).unwrap());
+    split("peppi zstd_slpp parse info", t);
+    
+    black_box(peppi::io::peppi::read(Cursor::new(
+        lz4_slpp_bytes.as_slice()),
+        Some(&peppi::io::peppi::de::Opts { skip_frames: true })
+    ).unwrap());
+    split("peppi lz4_slpp parse info", t);
     
     black_box(slp_parser::parse_file_info(&mut Cursor::new(slp_bytes.as_slice())).unwrap());
     split("slp_parser slp parse info", t);
