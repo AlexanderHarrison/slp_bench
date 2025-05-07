@@ -1,0 +1,10 @@
+[package]
+name = "parse_bench"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+peppi = "2.0.1"
+slpz = "1.2.0"
+slp_parser = { git = "https://github.com/alexanderharrison/slp_parser" }
+arrow2 = "0.17.0"
