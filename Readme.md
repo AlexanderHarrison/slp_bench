@@ -13,6 +13,10 @@ For example, slp_parser doesn't parse everything in an slp_file, only around 75%
 It's intended for use in rwing, not as a general purpose library.
 But I found it interesting to compare them.
 
+- peppi: 2.0.1
+- slp_parser: commit #13934b0
+- slpz: 1.2.0
+
 ### Benchmarks
 Clone and run this repo to generate your own benchmarks.
 Results are not averaged, assume ~20% error margin.
@@ -72,5 +76,6 @@ Both slp_parser and peppi have more functionality than parsing and compression.
 | slp_parser  | none |
 | slpz        | none |
 
-sdjhsj
+### Takeaways
+I need to improve the performance of parsing slpz files!
 
