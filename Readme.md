@@ -62,19 +62,12 @@ Both slp_parser and peppi have more functionality than parsing and compression.
 | slp_parser  | 6500 | 7300 |
 | slpz        | 553  | 700  |
 
-### Minimum slp Version
-| lib | min |
-| ----- | ----- |
-| peppi       | 0.1.0 (?) unsure |
-| slp_parser  | 3.0.0 |
-| slpz        | 0.1.0 |
-
-### Maximum slp Version
-| lib | max |
-| ----- | ----- |
-| peppi       | 3.16.0 (3.18.0 implemented but not pushed to crates.io) |
-| slp_parser  | none |
-| slpz        | none |
+### Supported slp Versions
+| lib | min | max |
+| ----- | ----- | ----- |
+| peppi       | 0.1.0 (?) unsure | 3.16.0 (3.18.0 implemented but not pushed to crates.io) |
+| slp_parser  | 3.0.0 | none |
+| slpz        | 0.1.0 | none |
 
 ### Takeaways
 - peppi is around 10x slower than slp_parser at parsing simple slp files (again, not a totally fair comparison).
