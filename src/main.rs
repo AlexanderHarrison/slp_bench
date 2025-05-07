@@ -8,8 +8,9 @@ use std::io::Cursor;
 // slpz: 1 direct (4 total)
 
 // lines of code:
-// peppi: 
-// slp_parser
+// peppi: 6800
+// slp_parser: 7400
+// slpz: 700
 
 // max supported slp version (current 3.18.0):
 // peppi: 3.16.0 (3.18.0 implemented but not pushed to crates.io)
