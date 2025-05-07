@@ -46,6 +46,8 @@ COMPRESS FULL GAME
 ```
 
 ### Dependencies:
+Calculated by counting the number of deps in a Cargo.lock file.
+
 | lib | direct deps | total deps |
 | ----- | ----- | ----- |
 | peppi       | 10 | 104 |
@@ -53,6 +55,8 @@ COMPRESS FULL GAME
 | slpz        | 1  | 4   |
 
 ### Lines of Code
+Calculated by [clocc](https://github.com/AlexanderHarrison/clocc).
+
 This is pretty useless as a metric.
 Both slp_parser and peppi have more functionality than parsing and compression.
 
@@ -63,6 +67,8 @@ Both slp_parser and peppi have more functionality than parsing and compression.
 | slpz        | 553  | 700  |
 
 ### Supported slp Versions
+Found by reading the source code.
+
 | lib | min | max |
 | ----- | ----- | ----- |
 | peppi       | 0.1.0 (?) unsure | 3.16.0 (3.18.0 implemented but not pushed to crates.io) |
