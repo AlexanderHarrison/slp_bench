@@ -77,5 +77,6 @@ Both slp_parser and peppi have more functionality than parsing and compression.
 | slpz        | none |
 
 ### Takeaways
-I need to improve the performance of parsing slpz files!
+- peppi is around 10x slower than slp_parser at parsing simple slp files (again, not a totally fair comparison).
+- I need to improve the performance of parsing slpz files!
 
